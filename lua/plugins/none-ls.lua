@@ -14,6 +14,8 @@ return {
 				null_ls.builtins.formatting.gofumpt,
 				null_ls.builtins.formatting.goimports,
 				null_ls.builtins.formatting.golines,
+				require("none-ls.formatting.ruff_format"),
+				require("none-ls.diagnostics.ruff"),
 				require("none-ls.diagnostics.eslint_d"),
 			},
 			on_attach = function(client, bufnr)

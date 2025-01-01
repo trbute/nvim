@@ -5,7 +5,7 @@ vim.schedule(function()
 	vim.opt.clipboard = "unnamedplus"
 end)
 
-vim.opt.relativenumber = true
+vim.opt.number = true
 vim.opt.cursorline = true
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
