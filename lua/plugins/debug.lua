@@ -10,12 +10,12 @@ return {
 		local dap = require("dap")
 		local dapui = require("dapui")
 
-		require("dapui").setup()
+		dapui.setup()
 		require("dap-go").setup()
 		require("nvim-dap-virtual-text").setup()
 
 		vim.keymap.set("n", "<leader>?", function()
-			require("dapui").eval(nil, { enter = true })
+			dapui.eval(nil, { enter = true })
 		end)
 		vim.keymap.set("n", "<leader>b", dap.toggle_breakpoint)
 		vim.keymap.set("n", "<F1>", dap.continue)
