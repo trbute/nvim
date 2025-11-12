@@ -9,7 +9,14 @@ return 	{
 			}
 		})
 		local minimap = require('mini.map')
-		minimap.setup()
+		minimap.setup({
+			integrations = {
+			  minimap.gen_integration.builtin_search(),
+			  minimap.gen_integration.diff(),
+			  minimap.gen_integration.diagnostic(),
+			},
+		  }
+		)
 		vim.keymap.set("n", "<leader>mt", minimap.toggle)
 	end
 }
